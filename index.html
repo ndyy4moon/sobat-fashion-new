@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sobat Fashion</title>
 
@@ -11,317 +11,280 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:#0c0c0c;
-    color:white;
-    overflow-x:hidden;
+background:#0d0d0d;
+color:white;
+overflow-x:hidden;
 }
 
 /* HEADER */
 
 header{
-    width:100%;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:fixed;
-    top:0;
-    z-index:1000;
-    background:rgba(0,0,0,0.75);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(255,255,255,0.05);
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(10px);
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .logo{
-    font-size:28px;
-    font-weight:700;
-    color:#ff4f8b;
-    letter-spacing:1px;
+font-size:28px;
+font-weight:700;
+color:#ff4f8b;
 }
 
 nav a{
-    text-decoration:none;
-    color:#ddd;
-    margin-left:28px;
-    transition:0.3s;
-    font-weight:500;
+text-decoration:none;
+color:#ddd;
+margin-left:25px;
+font-size:15px;
+transition:0.3s;
 }
 
 nav a:hover{
-    color:#ff4f8b;
+color:#ff4f8b;
 }
 
 /* HERO */
 
 .hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:120px 8%;
-    background:
-    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
-    url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1600&auto=format&fit=crop');
-    background-size:cover;
-    background-position:center;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:140px 8%;
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
 }
 
 .hero-content{
-    max-width:850px;
+max-width:850px;
 }
 
 .tag{
-    display:inline-block;
-    padding:10px 22px;
-    border-radius:50px;
-    background:rgba(255,79,139,0.1);
-    border:1px solid #ff4f8b;
-    color:#ff4f8b;
-    margin-bottom:25px;
-    font-size:14px;
+display:inline-block;
+padding:10px 22px;
+border-radius:50px;
+background:rgba(255,79,139,0.1);
+border:1px solid #ff4f8b;
+color:#ff4f8b;
+margin-bottom:25px;
+font-size:14px;
 }
 
 .hero h1{
-    font-size:68px;
-    line-height:1.1;
-    margin-bottom:22px;
+font-size:70px;
+line-height:1.1;
+margin-bottom:20px;
 }
 
 .hero h1 span{
-    color:#ff4f8b;
+color:#ff4f8b;
 }
 
 .hero p{
-    color:#cfcfcf;
-    line-height:1.8;
-    margin-bottom:35px;
-    font-size:17px;
+color:#cfcfcf;
+line-height:1.8;
+font-size:17px;
+margin-bottom:35px;
 }
 
-.hero-buttons{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
+.hero-btn{
+padding:16px 38px;
+border:none;
+border-radius:50px;
+background:#ff4f8b;
+color:white;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
 }
 
-.btn{
-    padding:15px 35px;
-    border:none;
-    border-radius:50px;
-    cursor:pointer;
-    font-size:15px;
-    font-weight:600;
-    transition:0.3s;
+.hero-btn:hover{
+background:#ff2f73;
+transform:translateY(-5px);
 }
 
-.btn-primary{
-    background:#ff4f8b;
-    color:white;
+/* TITLE */
+
+.title{
+text-align:center;
+margin:90px 0 50px;
 }
 
-.btn-primary:hover{
-    background:#ff2f73;
-    transform:translateY(-5px);
+.title h2{
+font-size:42px;
 }
 
-.btn-secondary{
-    background:transparent;
-    border:1px solid #444;
-    color:white;
-}
-
-.btn-secondary:hover{
-    border-color:#ff4f8b;
-    color:#ff4f8b;
-}
-
-/* SECTION TITLE */
-
-.section-title{
-    text-align:center;
-    margin:90px 0 50px;
-}
-
-.section-title h2{
-    font-size:44px;
-}
-
-.section-title p{
-    color:#999;
-    margin-top:10px;
+.title p{
+color:#999;
+margin-top:10px;
 }
 
 /* PRODUCTS */
 
 .products{
-    padding:0 8% 100px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:28px;
+padding:0 8% 100px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
 }
 
 .card{
-    background:#151515;
-    border-radius:26px;
-    overflow:hidden;
-    border:1px solid rgba(255,255,255,0.05);
-    transition:0.4s;
+background:#151515;
+border-radius:24px;
+overflow:hidden;
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.05);
 }
 
 .card:hover{
-    transform:translateY(-10px);
-    border-color:#ff4f8b;
+transform:translateY(-10px);
+border-color:#ff4f8b;
 }
 
 .card img{
-    width:100%;
-    height:330px;
-    object-fit:cover;
+width:100%;
+height:320px;
+object-fit:cover;
 }
 
 .card-content{
-    padding:24px;
+padding:24px;
 }
 
 .badge{
-    display:inline-block;
-    padding:7px 14px;
-    border-radius:30px;
-    background:#ff4f8b;
-    font-size:12px;
-    margin-bottom:15px;
-    font-weight:600;
+display:inline-block;
+padding:7px 14px;
+border-radius:30px;
+background:#ff4f8b;
+font-size:12px;
+font-weight:600;
+margin-bottom:15px;
 }
 
 .card-content h3{
-    font-size:24px;
-    margin-bottom:10px;
+font-size:24px;
+margin-bottom:12px;
 }
 
 .desc{
-    color:#aaa;
-    line-height:1.7;
-    font-size:14px;
-    margin-bottom:18px;
+color:#aaa;
+font-size:14px;
+line-height:1.7;
+margin-bottom:18px;
 }
 
 .price{
-    color:#ff4f8b;
-    font-size:25px;
-    font-weight:700;
-    margin-bottom:18px;
+font-size:26px;
+font-weight:700;
+color:#ff4f8b;
+margin-bottom:20px;
 }
 
-.card-content button{
-    width:100%;
-    padding:14px;
-    border:none;
-    border-radius:14px;
-    background:#ff4f8b;
-    color:white;
-    font-size:15px;
-    cursor:pointer;
-    transition:0.3s;
-    font-weight:600;
+.buy-btn{
+width:100%;
+padding:14px;
+border:none;
+border-radius:14px;
+background:#ff4f8b;
+color:white;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
 }
 
-.card-content button:hover{
-    background:#ff2f73;
+.buy-btn:hover{
+background:#ff2f73;
 }
 
 /* PROMO */
 
 .promo{
-    margin:0 8% 100px;
-    padding:60px;
-    border-radius:35px;
-    background:
-    linear-gradient(to right,#1a1a1a,#2b1020);
-    text-align:center;
+margin:0 8% 100px;
+padding:60px;
+border-radius:35px;
+text-align:center;
+background:
+linear-gradient(to right,#171717,#2c1020);
 }
 
 .promo h2{
-    font-size:48px;
-    margin-bottom:15px;
+font-size:48px;
+margin-bottom:15px;
 }
 
 .promo p{
-    color:#bbb;
-    margin-bottom:30px;
+color:#bbb;
+margin-bottom:30px;
 }
 
-/* TESTIMONI */
-
-.testimoni{
-    padding:0 8% 100px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-}
-
-.testi-card{
-    background:#151515;
-    border-radius:24px;
-    padding:30px;
-    border:1px solid rgba(255,255,255,0.05);
-}
-
-.testi-card h3{
-    color:#ff4f8b;
-    margin-bottom:12px;
-}
-
-.testi-card p{
-    color:#bbb;
-    line-height:1.7;
+.promo button{
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:#ff4f8b;
+color:white;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
 }
 
 /* FOOTER */
 
 footer{
-    padding:35px;
-    text-align:center;
-    border-top:1px solid rgba(255,255,255,0.08);
-    color:#777;
-    font-size:14px;
+padding:35px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,0.08);
+color:#777;
+font-size:14px;
 }
 
 /* RESPONSIVE */
 
 @media(max-width:768px){
 
-    header{
-        flex-direction:column;
-        gap:15px;
-    }
+header{
+flex-direction:column;
+gap:15px;
+}
 
-    nav{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
 
-    .hero h1{
-        font-size:44px;
-    }
+.hero h1{
+font-size:45px;
+}
 
-    .hero p{
-        font-size:15px;
-    }
+.hero p{
+font-size:15px;
+}
 
-    .promo h2{
-        font-size:36px;
-    }
+.promo h2{
+font-size:35px;
+}
 
 }
 
@@ -330,250 +293,111 @@ footer{
 
 <body>
 
-<!-- HEADER -->
-
 <header>
 
-    <div class="logo">
-        Sobat Fashion
-    </div>
+<div class="logo">
+Sobat Fashion
+</div>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#produk">Collection</a>
-        <a href="#review">Review</a>
-        <a href="#">Contact</a>
-    </nav>
+<nav>
+<a href="#">Home</a>
+<a href="#produk">Produk</a>
+<a href="#">Promo</a>
+<a href="#">Contact</a>
+</nav>
 
 </header>
 
-<!-- HERO -->
-
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <div class="tag">
-            Premium Local Fashion Brand
-        </div>
+<div class="tag">
+Premium Local Brand
+</div>
 
-        <h1>
-            Tampil Lebih <span>Modern</span><br>
-            Dengan Style Premium
-        </h1>
+<h1>
+Style Lokal Dengan<br>
+Vibes <span>Luxury Fashion</span>
+</h1>
 
-        <p>
-            Sobat Fashion menghadirkan koleksi fashion lokal Indonesia
-            dengan desain minimalis, aesthetic, dan elegan untuk generasi masa kini.
-        </p>
+<p>
+Koleksi fashion premium dengan desain minimalis,
+modern, dan aesthetic untuk generasi masa kini.
+</p>
 
-        <div class="hero-buttons">
-
-            <button class="btn btn-primary" onclick="scrollProduk()">
-                Shop Now
-            </button>
-
-            <button class="btn btn-secondary">
-                Explore Collection
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- TITLE -->
-
-<div class="section-title" id="produk">
-
-    <h2>Exclusive Collection</h2>
-
-    <p>
-        Koleksi pilihan dengan desain modern dan premium
-    </p>
+<button class="hero-btn" onclick="scrollProduk()">
+Shop Now
+</button>
 
 </div>
 
-<!-- PRODUCTS -->
+</section>
+
+<div class="title" id="produk">
+
+<h2>Exclusive Collection</h2>
+
+<p>
+Koleksi produk premium tanpa model, clean & aesthetic
+</p>
+
+</div>
 
 <section class="products">
 
-    <div class="card">
+<div class="card">
 
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop">
 
-        <div class="card-content">
+<div class="card-content">
 
-            <div class="badge">
-                BEST SELLER
-            </div>
+<div class="badge">
+BEST SELLER
+</div>
 
-            <h3>Essential Tee</h3>
+<h3>Essential T-Shirt</h3>
 
-            <div class="desc">
-                Kaos premium oversized berbahan cotton combed yang nyaman dipakai harian.
-            </div>
+<div class="desc">
+Kaos premium oversized dengan bahan cotton combed yang nyaman dipakai sehari-hari.
+</div>
 
-            <div class="price">
-                Rp129.000
-            </div>
+<div class="price">
+Rp129.000
+</div>
 
-            <button onclick="beli('Essential Tee')">
-                Add To Cart
-            </button>
-
-        </div>
-
-    </div>
-
-    <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-content">
-
-            <div class="badge">
-                NEW
-            </div>
-
-            <h3>Urban Hoodie</h3>
-
-            <div class="desc">
-                Hoodie aesthetic dengan desain streetwear modern khas brand lokal premium.
-            </div>
-
-            <div class="price">
-                Rp249.000
-            </div>
-
-            <button onclick="beli('Urban Hoodie')">
-                Add To Cart
-            </button>
-
-        </div>
-
-    </div>
-
-    <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-content">
-
-            <div class="badge">
-                LIMITED
-            </div>
-
-            <h3>Minimal Jacket</h3>
-
-            <div class="desc">
-                Jaket minimalis dengan nuansa clean dan classy untuk outfit modern.
-            </div>
-
-            <div class="price">
-                Rp299.000
-            </div>
-
-            <button onclick="beli('Minimal Jacket')">
-                Add To Cart
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- PROMO -->
-
-<section class="promo">
-
-    <h2>
-        New Collection 2026
-    </h2>
-
-    <p>
-        Dapatkan promo spesial hingga 40% untuk pembelian pertama
-    </p>
-
-    <button class="btn btn-primary">
-        Claim Promo
-    </button>
-
-</section>
-
-<!-- REVIEW -->
-
-<div class="section-title" id="review">
-
-    <h2>Customer Review</h2>
-
-    <p>
-        Review customer Sobat Fashion
-    </p>
+<button class="buy-btn" onclick="beli('Essential T-Shirt')">
+Add To Cart
+</button>
 
 </div>
 
-<section class="testimoni">
+</div>
 
-    <div class="testi-card">
+<div class="card">
 
-        <h3>⭐⭐⭐⭐⭐</h3>
+<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1200&auto=format&fit=crop">
 
-        <p>
-            "Design websitenya clean banget dan produknya keliatan premium."
-        </p>
+<div class="card-content">
 
-    </div>
+<div class="badge">
+NEW ARRIVAL
+</div>
 
-    <div class="testi-card">
+<h3>Urban Hoodie</h3>
 
-        <h3>⭐⭐⭐⭐⭐</h3>
+<div class="desc">
+Hoodie streetwear aesthetic dengan desain minimalis khas brand lokal premium.
+</div>
 
-        <p>
-            "Vibes nya kayak brand lokal mahal, aesthetic dan elegan."
-        </p>
+<div class="price">
+Rp249.000
+</div>
 
-    </div>
+<button class="buy-btn" onclick="beli('Urban Hoodie')">
+Add To Cart
+</button>
 
-    <div class="testi-card">
+</div>
 
-        <h3>⭐⭐⭐⭐⭐</h3>
-
-        <p>
-            "Nyaman dibuka di HP dan tampilannya modern banget."
-        </p>
-
-    </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-    © 2026 Sobat Fashion — Premium Local Brand Indonesia
-
-</footer>
-
-<script>
-
-function beli(nama){
-
-    alert(nama + " berhasil ditambahkan ke keranjang!");
-
-}
-
-function scrollProduk(){
-
-    document.getElementById("produk").scrollIntoView({
-        behavior:'smooth'
-    });
-
-}
-
-</script>
-
-</body>
-</html>
+</div>
