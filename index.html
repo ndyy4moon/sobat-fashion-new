@@ -41,7 +41,7 @@ border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:700;
 color:#ff4f8b;
 }
@@ -50,8 +50,8 @@ nav a{
 text-decoration:none;
 color:#ddd;
 margin-left:25px;
-font-size:15px;
 transition:0.3s;
+font-size:15px;
 }
 
 nav a:hover{
@@ -68,8 +68,8 @@ align-items:center;
 text-align:center;
 padding:140px 8%;
 background:
-linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.8)),
-url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1600&auto=format&fit=crop');
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1600&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
 }
@@ -90,7 +90,7 @@ font-size:14px;
 }
 
 .hero h1{
-font-size:68px;
+font-size:65px;
 line-height:1.1;
 margin-bottom:20px;
 }
@@ -101,8 +101,8 @@ color:#ff4f8b;
 
 .hero p{
 color:#cfcfcf;
-line-height:1.8;
 font-size:17px;
+line-height:1.8;
 margin-bottom:35px;
 }
 
@@ -163,8 +163,9 @@ border-color:#ff4f8b;
 
 .card img{
 width:100%;
-height:320px;
+height:300px;
 object-fit:cover;
+background:#fff;
 }
 
 .card-content{
@@ -194,7 +195,7 @@ margin-bottom:18px;
 }
 
 .price{
-font-size:26px;
+font-size:25px;
 font-weight:700;
 color:#ff4f8b;
 margin-bottom:20px;
@@ -217,62 +218,25 @@ transition:0.3s;
 background:#ff2f73;
 }
 
-/* PROMO */
+/* REVIEW */
 
-.promo{
-margin:0 8% 100px;
-padding:60px;
-border-radius:35px;
-text-align:center;
-background:
-linear-gradient(to right,#171717,#2c1020);
-}
-
-.promo h2{
-font-size:48px;
-margin-bottom:15px;
-}
-
-.promo p{
-color:#bbb;
-margin-bottom:30px;
-}
-
-.promo button{
-padding:15px 35px;
-border:none;
-border-radius:50px;
-background:#ff4f8b;
-color:white;
-font-size:15px;
-font-weight:600;
-cursor:pointer;
-}
-
-/* TESTIMONI */
-
-.testimoni{
+.review-section{
 padding:0 8% 100px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+gap:28px;
 }
 
-.testi-card{
+.review-card{
 background:#151515;
-border-radius:24px;
 padding:30px;
+border-radius:24px;
 border:1px solid rgba(255,255,255,0.05);
 }
 
-.testi-card h3{
+.review-card h3{
 color:#ff4f8b;
-margin-bottom:12px;
-}
-
-.testi-card p{
-color:#bbb;
-line-height:1.7;
+margin-bottom:15px;
 }
 
 /* FOOTER */
@@ -301,15 +265,11 @@ justify-content:center;
 }
 
 .hero h1{
-font-size:45px;
+font-size:42px;
 }
 
 .hero p{
 font-size:15px;
-}
-
-.promo h2{
-font-size:35px;
 }
 
 }
@@ -334,22 +294,24 @@ Sobat Fashion
 
 </header>
 
+<!-- HERO -->
+
 <section class="hero">
 
 <div class="hero-content">
 
 <div class="tag">
-Premium Local Brand Indonesia
+Premium Local Brand
 </div>
 
 <h1>
-Fashion Lokal Dengan<br>
-Vibes <span>Luxury Modern</span>
+Fashion Premium<br>
+<span>Tanpa Model</span>
 </h1>
 
 <p>
-Koleksi fashion premium dengan desain minimalis,
-clean aesthetic, dan modern untuk generasi masa kini.
+Website fashion aesthetic dengan konsep clean modern,
+premium local brand, dan responsive di semua HP maupun laptop.
 </p>
 
 <button class="hero-btn" onclick="scrollProduk()">
@@ -360,188 +322,223 @@ Shop Now
 
 </section>
 
+<!-- TITLE -->
+
 <div class="title" id="produk">
 
-<h2>Exclusive Collection</h2>
+<h2>Our Collection</h2>
 
 <p>
-Koleksi produk aesthetic tanpa model/orang
+Koleksi lengkap fashion wanita, pria, dan aksesoris premium
 </p>
 
 </div>
+
+<!-- PRODUCTS -->
 
 <section class="products">
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<div class="badge">WOMEN</div>
+<h3>Kaos Wanita</h3>
+<div class="desc">Kaos wanita premium aesthetic dengan bahan nyaman.</div>
+<div class="price">Rp129.000</div>
+<button class="buy-btn">Add To Cart</button>
+</div>
+</div>
 
+<div class="card">
+<img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<div class="badge">WOMEN</div>
+<h3>Dress Wanita</h3>
+<div class="desc">Dress wanita modern dengan style elegant premium.</div>
+<div class="price">Rp289.000</div>
+<button class="buy-btn">Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<div class="badge">WOMEN</div>
+<h3>Hoodie Wanita</h3>
+<div class="desc">Hoodie wanita streetwear modern dan aesthetic.</div>
+<div class="price">Rp249.000</div>
+<button class="buy-btn">Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<div class="badge">MEN</div>
+<h3>Kaos Pria</h3>
+<div class="desc">Kaos pria oversized premium dengan style modern.</div>
+<div class="price">Rp139.000</div>
+<button class="buy-btn">Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<div class="badge">MEN</div>
+<h3>Jaket Pria</h3>
+<div class="desc">Jaket pria classy premium dengan desain clean.</div>
+<div class="price">Rp339.000</div>
+<button class="buy-btn">Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<div class="badge">MEN</div>
+<h3>Kemeja Pria</h3>
+<div class="desc">Kemeja pria casual modern untuk outfit harian.</div>
+<div class="price">Rp229.000</div>
+<button class="buy-btn">Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<div class="badge">MEN</div>
+<h3>Celana Pria</h3>
+<div class="desc">Celana pria slim fit dengan bahan premium.</div>
+<div class="price">Rp259.000</div>
+<button class="buy-btn">Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<div class="badge">ACCESSORIES</div>
+<h3>Jam Wanita</h3>
+<div class="desc">Jam tangan wanita luxury aesthetic modern.</div>
+<div class="price">Rp499.000</div>
+<button class="buy-btn">Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<div class="badge">ACCESSORIES</div>
+<h3>Jam Pria</h3>
+<div class="desc">Jam tangan pria classy premium design.</div>
+<div class="price">Rp549.000</div>
+<button class="buy-btn">Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
 <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200&auto=format&fit=crop">
-
 <div class="card-content">
-
-<div class="badge">
-BEST SELLER
+<div class="badge">ACCESSORIES</div>
+<h3>Tas Wanita</h3>
+<div class="desc">Tas wanita clean aesthetic modern premium.</div>
+<div class="price">Rp319.000</div>
+<button class="buy-btn">Add To Cart</button>
 </div>
-
-<h3>Essential T-Shirt</h3>
-
-<div class="desc">
-Kaos premium oversized berbahan cotton combed yang nyaman dipakai sehari-hari.
-</div>
-
-<div class="price">
-Rp129.000
-</div>
-
-<button class="buy-btn" onclick="beli('Essential T-Shirt')">
-Add To Cart
-</button>
-
-</div>
-
 </div>
 
 <div class="card">
-
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop">
-
+<img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1200&auto=format&fit=crop">
 <div class="card-content">
-
-<div class="badge">
-NEW ARRIVAL
+<div class="badge">ACCESSORIES</div>
+<h3>Tas Pria</h3>
+<div class="desc">Tas pria casual premium untuk aktivitas harian.</div>
+<div class="price">Rp289.000</div>
+<button class="buy-btn">Add To Cart</button>
 </div>
-
-<h3>Urban Hoodie</h3>
-
-<div class="desc">
-Hoodie streetwear aesthetic dengan desain minimalis khas brand lokal premium.
-</div>
-
-<div class="price">
-Rp249.000
-</div>
-
-<button class="buy-btn" onclick="beli('Urban Hoodie')">
-Add To Cart
-</button>
-
-</div>
-
 </div>
 
 <div class="card">
-
-<img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1200&auto=format&fit=crop">
-
+<img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?q=80&w=1200&auto=format&fit=crop">
 <div class="card-content">
-
-<div class="badge">
-LIMITED
+<div class="badge">ACCESSORIES</div>
+<h3>Topi Wanita</h3>
+<div class="desc">Topi wanita stylish dengan nuansa aesthetic.</div>
+<div class="price">Rp119.000</div>
+<button class="buy-btn">Add To Cart</button>
 </div>
-
-<h3>Minimal Jacket</h3>
-
-<div class="desc">
-Jaket clean modern dengan nuansa classy dan elegant untuk outfit premium.
-</div>
-
-<div class="price">
-Rp329.000
-</div>
-
-<button class="buy-btn" onclick="beli('Minimal Jacket')">
-Add To Cart
-</button>
-
-</div>
-
 </div>
 
 <div class="card">
-
-<img src="https://images.unsplash.com/photo-1523380744952-b7f95a6c9c61?q=80&w=1200&auto=format&fit=crop">
-
+<img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?q=80&w=1200&auto=format&fit=crop">
 <div class="card-content">
-
-<div class="badge">
-TRENDING
+<div class="badge">ACCESSORIES</div>
+<h3>Topi Pria</h3>
+<div class="desc">Topi pria streetwear premium modern style.</div>
+<div class="price">Rp129.000</div>
+<button class="buy-btn">Add To Cart</button>
+</div>
 </div>
 
-<h3>Luxury Sneakers</h3>
-
-<div class="desc">
-Sneakers casual premium dengan desain modern dan nyaman dipakai harian.
+<div class="card">
+<img src="https://images.unsplash.com/photo-1627123424574-724758594e93?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<div class="badge">ACCESSORIES</div>
+<h3>Dompet Wanita</h3>
+<div class="desc">Dompet wanita elegant dengan style luxury.</div>
+<div class="price">Rp209.000</div>
+<button class="buy-btn">Add To Cart</button>
+</div>
 </div>
 
-<div class="price">
-Rp459.000
+<div class="card">
+<img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<div class="badge">ACCESSORIES</div>
+<h3>Dompet Pria</h3>
+<div class="desc">Dompet pria premium berbahan kulit modern.</div>
+<div class="price">Rp229.000</div>
+<button class="buy-btn">Add To Cart</button>
 </div>
-
-<button class="buy-btn" onclick="beli('Luxury Sneakers')">
-Add To Cart
-</button>
-
-</div>
-
 </div>
 
 </section>
 
-<section class="promo">
-
-<h2>
-New Collection 2026
-</h2>
-
-<p>
-Nikmati promo spesial hingga 40% untuk pembelian pertama
-</p>
-
-<button>
-Claim Promo
-</button>
-
-</section>
+<!-- REVIEW -->
 
 <div class="title" id="review">
 
 <h2>Customer Review</h2>
 
 <p>
-Review customer Sobat Fashion
+Review pelanggan Sobat Fashion
 </p>
 
 </div>
 
-<section class="testimoni">
+<section class="review-section">
 
-<div class="testi-card">
-
-<h3>⭐⭐⭐⭐⭐</h3>
-
+<div class="review-card">
+<h3>⭐⭐⭐⭐⭐ Amanda</h3>
 <p>
-"wah vibes nya kaya brand fashion mahal."
+"Produknya bagus banget dan kualitas premium,
+vibes nya kayak brand fashion mahal."
 </p>
-
 </div>
 
-<div class="testi-card">
-
-<h3>⭐⭐⭐⭐⭐</h3>
-
+<div class="review-card">
+<h3>⭐⭐⭐⭐⭐ Rizky</h3>
 <p>
-"wah suka banget barang nya bagus-bagus."
+"Mantep banget produknya bagus-bagus euyy."
 </p>
-
 </div>
 
-<div class="testi-card">
-
-<h3>⭐⭐⭐⭐⭐</h3>
-
+<div class="review-card">
+<h3>⭐⭐⭐⭐⭐ Nabila</h3>
 <p>
-"mantep banget produk-produk di sobat fashion ini."
+"Suka banget sama produk-produknya."
 </p>
-
 </div>
 
 </section>
@@ -553,12 +550,6 @@ Review customer Sobat Fashion
 </footer>
 
 <script>
-
-function beli(nama){
-
-alert(nama + " berhasil ditambahkan ke keranjang!");
-
-}
 
 function scrollProduk(){
 
