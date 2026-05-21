@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Sobat Fashion</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 
@@ -14,132 +14,238 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+font-family:Arial,sans-serif;
 }
 
 body{
-background:#0d0d0d;
-color:white;
-overflow-x:hidden;
+background:#f5f5f5;
 }
 
 /* HEADER */
 
 header{
-position:fixed;
-top:0;
-width:100%;
-padding:20px 8%;
+background:black;
+color:white;
+padding:20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,0.85);
-backdrop-filter:blur(10px);
-z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.05);
+flex-wrap:wrap;
 }
 
 .logo{
 font-size:30px;
-font-weight:700;
-color:#ff4f8b;
+font-weight:bold;
 }
 
-nav a{
-text-decoration:none;
-color:#ddd;
-margin-left:25px;
-transition:0.3s;
-font-size:15px;
+.search-box{
+display:flex;
+background:white;
+border-radius:8px;
+overflow:hidden;
+width:300px;
 }
 
-nav a:hover{
-color:#ff4f8b;
+.search-box input{
+border:none;
+padding:10px;
+width:100%;
+outline:none;
 }
 
-/* HERO */
+.search-box button{
+border:none;
+background:#e91e63;
+color:white;
+padding:10px 15px;
+cursor:pointer;
+}
 
-.hero{
-min-height:100vh;
+.icons i{
+font-size:22px;
+margin-left:15px;
+cursor:pointer;
+}
+
+/* BANNER */
+
+.banner{
+background:url('images/banner.jpg') center/cover;
+height:300px;
 display:flex;
 justify-content:center;
 align-items:center;
-text-align:center;
-padding:140px 8%;
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
-url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1600&auto=format&fit=crop');
-background-size:cover;
-background-position:center;
+color:white;
+font-size:40px;
+font-weight:bold;
+text-shadow:2px 2px 10px black;
 }
 
-.hero-content{
-max-width:850px;
+/* CATEGORY */
+
+.category{
+padding:30px;
 }
 
-.tag{
-display:inline-block;
-padding:10px 22px;
-border-radius:50px;
-background:rgba(255,79,139,0.1);
-border:1px solid #ff4f8b;
-color:#ff4f8b;
-margin-bottom:25px;
-font-size:14px;
-}
-
-.hero h1{
-font-size:65px;
-line-height:1.1;
+.category-title{
+font-size:28px;
 margin-bottom:20px;
 }
 
-.hero h1 span{
-color:#ff4f8b;
+/* PRODUCTS */
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
-.hero p{
-color:#cfcfcf;
-font-size:17px;
-line-height:1.8;
-margin-bottom:35px;
-}
-
-.hero-btn{
-padding:16px 38px;
-border:none;
-border-radius:50px;
-background:#ff4f8b;
-color:white;
-font-size:15px;
-font-weight:600;
-cursor:pointer;
+.card{
+background:white;
+border-radius:15px;
+padding:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 transition:0.3s;
+text-align:center;
+position:relative;
 }
 
-.hero-btn:hover{
-background:#ff2f73;
+.card:hover{
 transform:translateY(-5px);
 }
 
-/* TITLE */
+.discount{
+position:absolute;
+top:10px;
+left:10px;
+background:red;
+color:white;
+padding:5px 10px;
+border-radius:20px;
+font-size:12px;
+}
 
-.title{
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.card h3{
+margin-top:10px;
+font-size:18px;
+}
+
+.rating{
+color:orange;
+margin-top:5px;
+font-size:14px;
+}
+
+.old-price{
+text-decoration:line-through;
+color:gray;
+font-size:14px;
+margin-top:5px;
+}
+
+.price{
+color:#e91e63;
+font-size:22px;
+font-weight:bold;
+margin-top:5px;
+}
+
+.buttons{
+display:flex;
+gap:10px;
+margin-top:15px;
+}
+
+.buttons button{
+flex:1;
+padding:10px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.buy{
+background:black;
+color:white;
+}
+
+.cart{
+background:#e91e63;
+color:white;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+color:white;
+padding:30px;
+margin-top:50px;
 text-align:center;
-margin:90px 0 50px;
 }
 
-.title h2{
-font-size:42px;
-}
-
-.title p{
-color:#999;
+footer p{
 margin-top:10px;
 }
 
-/* PRODUCTS */
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+.search-box{
+width:100%;
+}
+
+.banner{
+font-size:28px;
+text-align:center;
+padding:20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+SOBAT FASHION
+</div>
+
+<div class="search-box">
+<input type="text" placeholder="Cari produk...">
+<button>
+<i class="fas fa-search"></i>
+</button>
+</div>
+
+<div class="icons">
+<i class="fas fa-heart"></i>
+<i class="fas fa-shopping-cart"></i>
+<i class="fas fa-user"></i>
+</div>
+
+</header>
+
+<div class="banner">
+FASHION TREND 2026
+</div>
 
 <!-- ================= WANITA ================= -->
 
@@ -150,11 +256,11 @@ margin-top:10px;
 
 <div class="card">
 <div class="discount">-30%</div>
-<img src="images/kaoswanita-pink.jpg">
-<h3>Oversized Tee Pink</h3>
+<img src="images/kaosputihpink1.jpg">
+<h3>Kaos Wanita 1</h3>
 <p class="rating">⭐ 4.9 | Terjual 1RB+</p>
 <p class="old-price">Rp179.000</p>
-<p class="price">Rp129.000</p>
+<p class="price">Rp150.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -163,10 +269,10 @@ margin-top:10px;
 
 <div class="card">
 <div class="discount">-30%</div>
-<img src="images/kaoswanita-black.jpg">
-<h3>Oversized Tee Black</h3>
+<img src="images/kaosputihpink2.jpg">
+<h3>Kaos Wanita 2</h3>
 <p class="rating">⭐ 4.8 | Terjual 900+</p>
-<p class="old-price">Rp179.000</p>
+<p class="old-price">Rp150.000</p>
 <p class="price">Rp129.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
@@ -176,8 +282,21 @@ margin-top:10px;
 
 <div class="card">
 <div class="discount">-30%</div>
-<img src="images/kaoswanita-white.jpg">
-<h3>Oversized Tee White</h3>
+<img src="images/kaoscoklat.jpg">
+<h3>Kaos Wanita 3</h3>
+<p class="rating">⭐ 4.9 | Terjual 2RB+</p>
+<p class="old-price">Rp179.000</p>
+<p class="price">Rp160.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<div class="discount">-30%</div>
+<img src="images/kaoslenganpanjang.jpg">
+<h3>Kaos Wanita 4</h3>
 <p class="rating">⭐ 4.9 | Terjual 2RB+</p>
 <p class="old-price">Rp179.000</p>
 <p class="price">Rp129.000</p>
@@ -198,10 +317,10 @@ margin-top:10px;
 <div class="products">
 
 <div class="card">
-<img src="images/hoodiewanita-black.jpg">
-<h3>Hoodie Black</h3>
+<img src="images/hoodieputih.jpg">
+<h3>Hoodie Wanita 1</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp279.000</p>
+<p class="price">Rp280.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -209,10 +328,21 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/hoodiewanita-pink.jpg">
-<h3>Hoodie Pink</h3>
+<img src="images/hoodiepink.jpg">
+<h3>Hoodie Waanita 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp279.000</p>
+<p class="price">Rp290.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/hoodiemix.jpg">
+<h3>Hoodie Waanita 3</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp280.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -230,10 +360,10 @@ margin-top:10px;
 <div class="products">
 
 <div class="card">
-<img src="images/dress-black.jpg">
-<h3>Elegant Dress Black</h3>
+<img src="images/dressputih.jpg">
+<h3>Elegant Dress 1</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp239.000</p>
+<p class="price">Rp350.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -241,10 +371,43 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/dress-pink.jpg">
-<h3>Elegant Dress Pink</h3>
+<img src="images/dresspinkputih.jpg">
+<h3>Elegant Dress 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp239.000</p>
+<p class="price">355.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/dresshitam.jpg">
+<h3>Elegant Dress 3</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">360.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/dressbiru.jpg">
+<h3>Elegant Dress 4</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">380.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/dressabuabu.jpg">
+<h3>Elegant Dress 5</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">390.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -262,10 +425,10 @@ margin-top:10px;
 <div class="products">
 
 <div class="card">
-<img src="images/celanawanita-blue.jpg">
-<h3>Baggy Jeans Blue</h3>
+<img src="images/jeanswanita1.jpg">
+<h3>Jeans Wanita 1</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp259.000</p>
+<p class="price">Rp250.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -273,10 +436,32 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/celanawanita-black.jpg">
-<h3>Baggy Jeans Black</h3>
+<img src="images/jeanswanita2.jpg">
+<h3>Jeans Wanita 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp259.000</p>
+<p class="price">Rp260.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/jeanswanita3.jpg">
+<h3>Jeans Wanita 3</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp280.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/jeanswanita4.jpg">
+<h3>Jeans Wanita 4</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp280.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -294,10 +479,10 @@ margin-top:10px;
 <div class="products">
 
 <div class="card">
-<img src="images/taswanita-black.jpg">
-<h3>Tote Bag Black</h3>
+<img src="images/taswanita1.jpg">
+<h3>Tas Wanita 1</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp219.000</p>
+<p class="price">Rp330.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -305,10 +490,32 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/taswanita-pink.jpg">
-<h3>Tote Bag Pink</h3>
+<img src="images/taswanita2.jpg">
+<h3>Tas Wanita 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp219.000</p>
+<p class="price">Rp350.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/taswanita3.jpg">
+<h3>Tas Wanita 3</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp340.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/taswanita4.jpg">
+<h3>Tas Wanita 4</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp360.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -326,10 +533,10 @@ margin-top:10px;
 <div class="products">
 
 <div class="card">
-<img src="images/dompetwanita-pink.jpg">
-<h3>Mini Wallet Pink</h3>
+<img src="images/dompetwanita1.jpg">
+<h3>Dompet Wanita 1</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp129.000</p>
+<p class="price">Rp130.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -337,10 +544,32 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/dompetwanita-black.jpg">
-<h3>Mini Wallet Black</h3>
+<img src="images/dompetwanita2.jpg">
+<h3>Dompet Wanita 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp129.000</p>
+<p class="price">Rp120.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/dompetwanita3.jpg">
+<h3>Dompet Wanita 3</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp110.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/dompetwanita4.jpg">
+<h3>Dompet Wanita 4</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp140.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -358,10 +587,10 @@ margin-top:10px;
 <div class="products">
 
 <div class="card">
-<img src="images/topiwanita-pink.jpg">
-<h3>Cap Pink</h3>
+<img src="images/topiwanita1.jpg">
+<h3>Topi Wanita 1</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp99.000</p>
+<p class="price">Rp110.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -369,10 +598,32 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/topiwanita-black.jpg">
-<h3>Cap Black</h3>
+<img src="images/topiwanita2.jpg">
+<h3>Topi Wanita 2</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp99.000</p>
+<p class="price">Rp120.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/topiwanita3.jpg">
+<h3>Topi Wanita 3</h3>
+<p class="rating">⭐ 4.9</p>
+<p class="price">Rp110.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/topiwanita4.jpg">
+<h3>Topi Wanita 4</h3>
+<p class="rating">⭐ 4.9</p>
+<p class="price">Rp120.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -390,10 +641,10 @@ margin-top:10px;
 <div class="products">
 
 <div class="card">
-<img src="images/jamwanita-gold.jpg">
-<h3>Luxury Watch Gold</h3>
+<img src="images/jamtanganwanita1.jpg">
+<h3>Jam Tangan Wanita 1</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp229.000</p>
+<p class="price">Rp370.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -401,10 +652,32 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/jamwanita-black.jpg">
-<h3>Luxury Watch Black</h3>
+<img src="images/jamtanganwanita2.jpg">
+<h3>Jam Tangan Wanita 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp229.000</p>
+<p class="price">Rp280.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/jamtanganwanita3.jpg">
+<h3>Jam Tangan Wanita 3</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp280.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/jamtanganwanita4.jpg">
+<h3>Jam Tangan Wanita 4</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp290.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -422,10 +695,10 @@ margin-top:10px;
 <div class="products">
 
 <div class="card">
-<img src="images/kaospria-black.jpg">
-<h3>Streetwear Tee Black</h3>
+<img src="images/kaospria1.jpg">
+<h3>Kaos Pria 1</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp139.000</p>
+<p class="price">Rp130.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -433,10 +706,32 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/kaospria-white.jpg">
-<h3>Streetwear Tee White</h3>
+<img src="images/kaospria2.jpg">
+<h3>Kaos Pria 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp139.000</p>
+<p class="price">Rp150.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/kaospria3.jpg">
+<h3>Kaos Pria 3</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp155.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/kaospria4.jpg">
+<h3>Kaos Pria 4</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp170.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -445,6 +740,8 @@ margin-top:10px;
 
 </div>
 </section>
+
+<!-- KEMEJA PRIA -->
 
 <section class="category">
 <h2 class="category-title">Kemeja Pria</h2>
@@ -452,10 +749,10 @@ margin-top:10px;
 <div class="products">
 
 <div class="card">
-<img src="images/kemejapria-black.jpg">
-<h3>Casual Shirt Black</h3>
+<img src="images/kemejapria1.jpg">
+<h3>Kemeja Pria 1</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp199.000</p>
+<p class="price">Rp190.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -463,10 +760,32 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/kemejapria-white.jpg">
-<h3>Casual Shirt White</h3>
+<img src="images/kemejapria2.jpg">
+<h3>Kemeja Pria 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp199.000</p>
+<p class="price">Rp195.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/kemejapria3.jpg">
+<h3>Kemeja Pria 3</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp190.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/kemejapria4.jpg">
+<h3>Kemeja Pria 4</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp195.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -475,6 +794,8 @@ margin-top:10px;
 
 </div>
 </section>
+
+<!-- JAKET PRIA -->
 
 <section class="category">
 <h2 class="category-title">Jaket Pria</h2>
@@ -482,10 +803,10 @@ margin-top:10px;
 <div class="products">
 
 <div class="card">
-<img src="images/jaketpria-black.jpg">
-<h3>Bomber Jacket Black</h3>
+<img src="images/jaketpria1.jpg">
+<h3>Jaket Pria 1</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp329.000</p>
+<p class="price">Rp320.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -493,10 +814,32 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/jaketpria-grey.jpg">
-<h3>Bomber Jacket Grey</h3>
+<img src="images/jaketpria2.jpg">
+<h3>Jaket Pria 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp329.000</p>
+<p class="price">Rp330.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/jaketpria3jpg">
+<h3>Jaket Pria 3</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp350.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/jaketpria4.jpg">
+<h3>Jaket Pria 4</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp360.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -505,6 +848,8 @@ margin-top:10px;
 
 </div>
 </section>
+
+<!-- CELANA PRIA -->
 
 <section class="category">
 <h2 class="category-title">Celana Pria</h2>
@@ -512,10 +857,10 @@ margin-top:10px;
 <div class="products">
 
 <div class="card">
-<img src="images/celanapria-black.jpg">
-<h3>Baggy Jeans Black</h3>
+<img src="images/jeanspria1.jpg">
+<h3>Jeans Pria 1</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp269.000</p>
+<p class="price">Rp260.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -523,10 +868,32 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/celanapria-blue.jpg">
-<h3>Baggy Jeans Blue</h3>
+<img src="images/jeanspria2.jpg">
+<h3>Jeans Pria 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp269.000</p>
+<p class="price">Rp270.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/jeanspria3.jpg">
+<h3>Jeans Pria 3</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp250.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/jeanspria4.jpg">
+<h3>Jeans Pria 4</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp290.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -535,6 +902,8 @@ margin-top:10px;
 
 </div>
 </section>
+
+<!-- TAS PRIA -->
 
 <section class="category">
 <h2 class="category-title">Tas Pria</h2>
@@ -542,10 +911,10 @@ margin-top:10px;
 <div class="products">
 
 <div class="card">
-<img src="images/taspria-black.jpg">
-<h3>Sling Bag Black</h3>
+<img src="images/taspria1.jpg">
+<h3>Tas Pria 1</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp189.000</p>
+<p class="price">Rp180.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -553,10 +922,32 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/taspria-grey.jpg">
-<h3>Sling Bag Grey</h3>
+<img src="images/taspria2.jpg">
+<h3>Tas Pria 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp189.000</p>
+<p class="price">Rp190.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/taspria3.jpg">
+<h3>Tas Pria 3</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp160.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/taspria4.jpg">
+<h3>Tas Pria 4</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp180.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -565,6 +956,8 @@ margin-top:10px;
 
 </div>
 </section>
+
+<!-- DOMPET PRIA -->
 
 <section class="category">
 <h2 class="category-title">Dompet Pria</h2>
@@ -572,10 +965,10 @@ margin-top:10px;
 <div class="products">
 
 <div class="card">
-<img src="images/dompetpria-black.jpg">
-<h3>Leather Wallet Black</h3>
+<img src="images/dompetpria1.jpg">
+<h3>Dompet Pria 1</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp149.000</p>
+<p class="price">Rp140.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -583,10 +976,32 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/dompetpria-brown.jpg">
-<h3>Leather Wallet Brown</h3>
+<img src="images/dompetpria2.jpg">
+<h3>Dompet Pria 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp149.000</p>
+<p class="price">Rp155.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/dompetpria3.jpg">
+<h3>Dompet Pria 3</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp150.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/dompetpria4.jpg">
+<h3>Dompet Pria 4</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp160.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -595,6 +1010,8 @@ margin-top:10px;
 
 </div>
 </section>
+
+<!-- JAM PRIA -->
 
 <section class="category">
 <h2 class="category-title">Jam Tangan Pria</h2>
@@ -602,10 +1019,10 @@ margin-top:10px;
 <div class="products">
 
 <div class="card">
-<img src="images/jampria-black.jpg">
-<h3>Classic Watch Black</h3>
+<img src="images/jamtanganpria1.jpg">
+<h3>Jam Tangan Pria 1</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp249.000</p>
+<p class="price">Rp240.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -613,10 +1030,32 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/jampria-silver.jpg">
-<h3>Classic Watch Silver</h3>
+<img src="images/jamtanganpria2.jpg">
+<h3>Jam Tangan Pria 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp249.000</p>
+<p class="price">Rp265.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/jamtanganpria3.jpg">
+<h3>Jam Tangan Pria 3</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp260.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/jamtanganpria4.jpg">
+<h3>Jam Tangan Pria 4</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp270.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -626,16 +1065,18 @@ margin-top:10px;
 </div>
 </section>
 
+<!-- TOPI PRIA -->
+
 <section class="category">
 <h2 class="category-title">Topi Pria</h2>
 
 <div class="products">
 
 <div class="card">
-<img src="images/topipria-black.jpg">
-<h3>Streetwear Cap Black</h3>
+<img src="images/topipria1.jpg">
+<h3>Topi Pria 1</h3>
 <p class="rating">⭐ 4.9</p>
-<p class="price">Rp109.000</p>
+<p class="price">Rp110.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -643,10 +1084,32 @@ margin-top:10px;
 </div>
 
 <div class="card">
-<img src="images/topipria-white.jpg">
-<h3>Streetwear Cap White</h3>
+<img src="images/topipria2.jpg">
+<h3>Topi Pria 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">Rp109.000</p>
+<p class="price">Rp120.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/topipria3.jpg">
+<h3>Topi Pria 3</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp130.000</p>
+<div class="buttons">
+<button class="cart">Keranjang</button>
+<button class="buy">Beli</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/topipria4.jpg">
+<h3>Topi Pria 4</h3>
+<p class="rating">⭐ 4.8</p>
+<p class="price">Rp150.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -662,10 +1125,9 @@ margin-top:10px;
 
 <p>Fashion kekinian pria & wanita</p>
 
-<p>© 2026 Fashion Store</p>
+<p>© 2026 SOBAT fASHION</p>
 
 </footer>
 
 </body>
 </html>
-
