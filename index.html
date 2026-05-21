@@ -70,7 +70,7 @@ cursor:pointer;
 /* BANNER */
 
 .banner{
-background:url('images/banner.jpg') center/cover;
+background:linear-gradient(45deg,#ff4d6d,#ff758f,#ff8fa3);
 height:300px;
 display:flex;
 justify-content:center;
@@ -229,7 +229,7 @@ SOBAT FASHION
 </div>
 
 <div class="search-box">
-<input type="text" placeholder="Cari produk...">
+<input type="text" id="searchInput" placeholder="Cari produk...">
 <button>
 <i class="fas fa-search"></i>
 </button>
@@ -329,7 +329,7 @@ FASHION TREND 2026
 
 <div class="card">
 <img src="images/hoodiepink.jpg">
-<h3>Hoodie Waanita 2</h3>
+<h3>Hoodie Wanita 2</h3>
 <p class="rating">⭐ 4.8</p>
 <p class="price">Rp290.000</p>
 <div class="buttons">
@@ -340,7 +340,7 @@ FASHION TREND 2026
 
 <div class="card">
 <img src="images/hoodiemix.jpg">
-<h3>Hoodie Waanita 3</h3>
+<h3>Hoodie Wanita 3</h3>
 <p class="rating">⭐ 4.8</p>
 <p class="price">Rp280.000</p>
 <div class="buttons">
@@ -374,7 +374,7 @@ FASHION TREND 2026
 <img src="images/dresspinkputih.jpg">
 <h3>Elegant Dress 2</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">355.000</p>
+<p class="price">Rp355.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -385,7 +385,7 @@ FASHION TREND 2026
 <img src="images/dresshitam.jpg">
 <h3>Elegant Dress 3</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">360.000</p>
+<p class="price">Rp360.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -396,7 +396,7 @@ FASHION TREND 2026
 <img src="images/dressbiru.jpg">
 <h3>Elegant Dress 4</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">380.000</p>
+<p class="price">Rp380.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -407,7 +407,7 @@ FASHION TREND 2026
 <img src="images/dressabuabu.jpg">
 <h3>Elegant Dress 5</h3>
 <p class="rating">⭐ 4.8</p>
-<p class="price">390.000</p>
+<p class="price">Rp390.000</p>
 <div class="buttons">
 <button class="cart">Keranjang</button>
 <button class="buy">Beli</button>
@@ -825,7 +825,7 @@ FASHION TREND 2026
 </div>
 
 <div class="card">
-<img src="images/jaketpria3jpg">
+<img src="images/jaketpria3.jpg">
 <h3>Jaket Pria 3</h3>
 <p class="rating">⭐ 4.8</p>
 <p class="price">Rp350.000</p>
@@ -1128,6 +1128,56 @@ FASHION TREND 2026
 <p>© 2026 SOBAT fASHION</p>
 
 </footer>
+
+<script>
+
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function(){
+
+let filter = searchInput.value.toLowerCase();
+
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+let title = card.querySelector("h3").textContent.toLowerCase();
+
+if(title.includes(filter)){
+card.style.display = "";
+}else{
+card.style.display = "none";
+}
+
+});
+
+});
+
+let cartButtons = document.querySelectorAll(".cart");
+
+cartButtons.forEach(function(button){
+
+button.addEventListener("click", function(){
+
+alert("Produk berhasil masuk keranjang 🛒");
+
+});
+
+});
+
+let buyButtons = document.querySelectorAll(".buy");
+
+buyButtons.forEach(function(button){
+
+button.addEventListener("click", function(){
+
+alert("Menuju checkout 💳");
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
